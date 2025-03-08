@@ -1,10 +1,10 @@
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
-import { ProjectCard } from "@/components/project-card";
 import { ResumeCard } from "@/components/resume-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { DATA } from "@/data/resume";
+import Markdown from "react-markdown";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -36,7 +36,7 @@ export default function Page() {
           </div>
         </div>
       </section>
-      {/* <section id="about">
+      <section id="about">
         <BlurFade delay={BLUR_FADE_DELAY * 3}>
           <h2 className="text-xl font-bold">About</h2>
         </BlurFade>
@@ -45,7 +45,7 @@ export default function Page() {
             {DATA.summary}
           </Markdown>
         </BlurFade>
-      </section> */}
+      </section>
       <section id="work">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 5}>
@@ -159,7 +159,16 @@ export default function Page() {
               <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
                 Get in Touch
               </h2>
-                <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">Want to chat? Just shoot me a dm <a className="text-blue-500 hover:underline" href="https://www.linkedin.com/in/matheus-borges-guedes/">with a direct question on Linkedin</a> and I&apos;ll respond whenever I can.</p>
+              <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                Want to chat? Just shoot me a dm{" "}
+                <a
+                  className="text-blue-500 hover:underline"
+                  href="https://www.linkedin.com/in/matheus-borges-guedes/"
+                >
+                  with a direct question on Linkedin
+                </a>{" "}
+                and I&apos;ll respond whenever I can.
+              </p>
             </div>
           </BlurFade>
         </div>
