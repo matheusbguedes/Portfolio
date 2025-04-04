@@ -4,7 +4,7 @@ import { HomeIcon, Star } from "lucide-react";
 export const DATA = {
   name: "Matheus Borges",
   initials: "MB",
-  url: "https://dillion.io",
+  url: "https://github.com/matheusbguedes/Portfolio.git",
   location: "São Paulo, SP",
   locationLink: "https://maps.app.goo.gl/TxSWum4TebBA3g9a7",
   description: "Software Engineer. I love building things and helping people.",
@@ -46,7 +46,7 @@ export const DATA = {
     social: {
       GitHub: {
         name: "GitHub",
-        url: "https://github.com/Borgeta-code",
+        url: "https://github.com/matheusbguedes",
         icon: Icons.github,
 
         navbar: true,
