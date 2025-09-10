@@ -1,8 +1,8 @@
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
+import { Marquee } from "@/components/magicui/marquee";
 import { ResumeCard } from "@/components/resume-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Badge } from "@/components/ui/badge";
 import { DATA } from "@/data/resume";
 import Markdown from "react-markdown";
 
@@ -99,12 +99,14 @@ export default function Page() {
           <BlurFade delay={BLUR_FADE_DELAY * 9}>
             <h2 className="text-xl font-bold">Skills</h2>
           </BlurFade>
-          <div className="flex flex-wrap gap-1">
+          <div className="relative flex w-full flex-col items-center justify-center marquee-mask-horizontal">
+          <Marquee pauseOnHover className="[--duration:50s]">
             {DATA.skills.map((skill, id) => (
-              <BlurFade key={skill} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
-                <Badge key={skill}>{skill}</Badge>
+              <BlurFade key={id} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
+                <img src={skill.image} alt={skill.name} className="size-10" />
               </BlurFade>
             ))}
+            </Marquee>
           </div>
         </div>
       </section>
