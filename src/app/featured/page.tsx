@@ -25,7 +25,7 @@ export default function Featured() {
           <ul className="mb-4 md:ml-4 divide-y divide-dashed border-l">
             {DATA.featured.map((featured, id) => (
               <BlurFade
-                key={featured.id}
+                key={featured.title}
                 delay={BLUR_FADE_DELAY * 15 + id * 0.05}
               >
                 <FeaturedCard

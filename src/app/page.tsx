@@ -1,3 +1,4 @@
+import { EducationCard } from "@/components/education-card";
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { Marquee } from "@/components/magicui/marquee";
@@ -28,7 +29,7 @@ export default function Page() {
               />
             </div>
             <BlurFade delay={BLUR_FADE_DELAY}>
-              <Avatar className="size-28 border">
+              <Avatar className="size-28 border shadow-lg">
                 <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
                 <AvatarFallback>{DATA.initials}</AvatarFallback>
               </Avatar>
@@ -81,7 +82,7 @@ export default function Page() {
               key={education.school}
               delay={BLUR_FADE_DELAY * 8 + id * 0.05}
             >
-              <ResumeCard
+              <EducationCard
                 key={education.school}
                 href={education.href}
                 logoUrl={education.logoUrl}
@@ -95,17 +96,17 @@ export default function Page() {
         </div>
       </section>
       <section id="skills">
-        <div className="flex min-h-0 flex-col gap-y-3">
+        <div className="flex min-h-0 flex-col gap-y-3 overflow-hidden">
           <BlurFade delay={BLUR_FADE_DELAY * 9}>
             <h2 className="text-xl font-bold">Skills</h2>
           </BlurFade>
           <div className="relative flex w-full flex-col items-center justify-center marquee-mask-horizontal">
-          <Marquee pauseOnHover className="[--duration:50s]">
-            {DATA.skills.map((skill, id) => (
-              <BlurFade key={id} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
-                <img src={skill.image} alt={skill.name} className="size-10" />
-              </BlurFade>
-            ))}
+            <Marquee pauseOnHover className="[--duration:50s]">
+              {DATA.skills.map((skill, id) => (
+                <BlurFade key={id} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
+                  <img src={skill.image} alt={skill.name} className="size-10" />
+                </BlurFade>
+              ))}
             </Marquee>
           </div>
         </div>

@@ -38,7 +38,7 @@ export const DATA = {
     { name: "Redis", image: "https://www.svgrepo.com/show/303460/redis-logo.svg" },
     { name: "MongoDB", image: "https://www.svgrepo.com/show/331488/mongodb.svg" },
     { name: "AWS", image: "https://www.svgrepo.com/show/448266/aws.svg" },
-  ],  
+  ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
     { href: "/featured", icon: Star, label: "Featured" },
@@ -133,7 +133,20 @@ export const DATA = {
   ],
   featured: [
     {
-      id: 4,
+      title: "Software observability with the Datadog tool",
+      description:
+        "A technical talk where technology teams came together to discuss software observability using the Datadog tool. The session also featured valuable contributions from Appoena, fostering knowledge sharing, collaboration, and deep technical learning among teams.",
+      image: "/featured_6.jpeg",
+      date: "06/04/2025",
+    },
+    {
+      title: "Hackathon Receita Federal",
+      description:
+        "My friends and I participated in the first hackathon organized by the Brazilian Federal Revenue. Our project was a low-cost breathalyzer built using components from electronic cigarettes. It was a great experience, and it allowed us to develop new skills, especially related to working with hardware.",
+      image: "/featured_5.jpg",
+      date: "05/30/2025",
+    },
+    {
       title: "Hackathon PagBank",
       description:
         "I participated in PagBank's first hackathon open to students, with the theme 'BANK OF THE FUTURE'. We developed an application with artificial intelligence - a financial assistant that thoroughly studied your financial life, providing insights for better management, and an app with open finance that integrated with other banks. After 28 hours of challenge, we emerged as winners. It was an incredible and transformative experience.",
@@ -141,7 +154,6 @@ export const DATA = {
       date: "11/10/2024",
     },
     {
-      id: 3,
       title: "Meetup NodeJs Brazil community",
       description:
         "I participated in a meetup of the NodeJs Brazil community. It was very interesting to be able to participate since Node is one of the technologies I am most engaged with. It also strengthened the sense of community and I was able to learn many things from the day's talks.",
@@ -149,7 +161,6 @@ export const DATA = {
       date: "11/05/2024",
     },
     {
-      id: 2,
       title: "Microsoft Reactor Event",
       description:
         "I participated in a Microsoft Reactor Event, where I learned about the The impact of the Community in the Technology, from open source to networking. And I met some great people, who makes the community even better.",
@@ -157,7 +168,6 @@ export const DATA = {
       date: "08/01/2024",
     },
     {
-      id: 1,
       title: "School Resource Management Software Development",
       description:
         "In high school, I had the opportunity as a course conclusion work to participate in a fair where my team and I presented a scheduling software for school resources such as notebooks or rooms. It was an incredible experience and I learned a lot from it, being one of the first major projects I participated in. To this day, the school continues to use our software, which demonstrates the practical impact and effectiveness of our initial project.",
