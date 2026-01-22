@@ -22,11 +22,14 @@ export default function Page() {
                 yOffset={8}
                 text={`Hi, I'm ${DATA.name.split(" ")[0]} 👋`}
               />
-              <BlurFadeText
-                className="max-w-[600px] md:text-xl"
+              <BlurFade
+                className="max-w-[600px]"
                 delay={BLUR_FADE_DELAY}
-                text={DATA.description}
-              />
+              >
+                <Markdown className="prose max-w-full text-pretty font-sans text-lg md:text-xl text-muted-foreground dark:prose-invert">
+                  {DATA.description}
+                </Markdown>
+              </BlurFade>
             </div>
             <BlurFade delay={BLUR_FADE_DELAY}>
               <Avatar className="size-28 border shadow-lg">
@@ -37,7 +40,7 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <section id="about">
+      <section id="about" className="space-y-2">
         <BlurFade delay={BLUR_FADE_DELAY * 3}>
           <h2 className="text-xl font-bold">About</h2>
         </BlurFade>
@@ -176,6 +179,6 @@ export default function Page() {
           </BlurFade>
         </div>
       </section>
-    </main>
+    </main >
   );
 }

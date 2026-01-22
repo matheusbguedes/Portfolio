@@ -17,7 +17,7 @@ export function FeaturedCard({ title, description, image, date }: Props) {
         width={1000}
         height={1000}
         draggable={false}
-        className="w-full object-cover rounded-2xl"
+        className="w-full object-cover rounded-2xl shadow-md"
       />
       <div className="flex flex-col">
         <div className="flex flex-col pb-2">
