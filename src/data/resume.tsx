@@ -133,6 +133,13 @@ export const DATA = {
   ],
   featured: [
     {
+      title: "Build in Public Meetup by AbacatePay",
+      description:
+        "I joined the Build in Public meetup by AbacatePay. Great day hearing real stories from people building products and talking about tech, AI, and entrepreneurship. Thanks to Daniel Lima, the AbacatePay team, and everyone who shared their experiences..",
+      image: "/featured_7.jpeg",
+      date: "03/26/2026",
+    },
+    {
       title: "Software observability with the Datadog tool",
       description:
         "A technical talk where technology teams came together to discuss software observability using the Datadog tool. The session also featured valuable contributions from Appoena, fostering knowledge sharing, collaboration, and deep technical learning among teams.",
