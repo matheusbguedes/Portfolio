@@ -1,4 +1,5 @@
 import { FeaturedCard } from "@/components/featured-card";
+import { FeaturedTimeline } from "@/components/featured-timeline";
 import BlurFade from "@/components/magicui/blur-fade";
 import { DATA } from "@/data/resume";
 
@@ -21,23 +22,17 @@ export default function Featured() {
             </div>
           </div>
         </BlurFade>
-        <BlurFade delay={BLUR_FADE_DELAY * 14}>
-          <ul className="mb-4 md:ml-4 divide-y divide-dashed border-l">
-            {DATA.featured.map((featured, id) => (
-              <BlurFade
-                key={featured.title}
-                delay={BLUR_FADE_DELAY * 15 + id * 0.05}
-              >
-                <FeaturedCard
-                  title={featured.title}
-                  description={featured.description}
-                  image={featured.image}
-                  date={featured.date}
-                />
-              </BlurFade>
-            ))}
-          </ul>
-        </BlurFade>
+        <FeaturedTimeline>
+          {DATA.featured.map((featured) => (
+            <FeaturedCard
+              key={featured.title}
+              title={featured.title}
+              description={featured.description}
+              image={featured.image}
+              date={featured.date}
+            />
+          ))}
+        </FeaturedTimeline>
       </div>
     </section>
   );
