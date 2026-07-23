@@ -4,6 +4,11 @@ import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { Marquee } from "@/components/magicui/marquee";
 import { ResumeCard } from "@/components/resume-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 import { DATA } from "@/data/resume";
 import Markdown from "react-markdown";
 
@@ -26,9 +31,9 @@ export default function Page() {
                 className="max-w-[600px]"
                 delay={BLUR_FADE_DELAY}
               >
-                <Markdown className="prose max-w-full text-pretty font-sans text-lg md:text-xl text-muted-foreground dark:prose-invert">
-                  {DATA.description}
-                </Markdown>
+                <div className="prose max-w-full text-pretty font-sans text-lg md:text-xl text-muted-foreground dark:prose-invert">
+                  <Markdown>{DATA.description}</Markdown>
+                </div>
               </BlurFade>
             </div>
             <BlurFade delay={BLUR_FADE_DELAY}>
@@ -45,9 +50,9 @@ export default function Page() {
           <h2 className="text-xl font-bold">About</h2>
         </BlurFade>
         <BlurFade delay={BLUR_FADE_DELAY * 4}>
-          <Markdown className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
-            {DATA.summary}
-          </Markdown>
+          <div className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
+            <Markdown>{DATA.summary}</Markdown>
+          </div>
         </BlurFade>
       </section>
       <section id="work">
@@ -99,15 +104,28 @@ export default function Page() {
         </div>
       </section>
       <section id="skills">
-        <div className="flex min-h-0 flex-col gap-y-3 overflow-hidden">
+        <div className="flex min-h-0 flex-col gap-y-3 overflow-x-clip">
           <BlurFade delay={BLUR_FADE_DELAY * 9}>
             <h2 className="text-xl font-bold">Skills</h2>
           </BlurFade>
-          <div className="relative flex w-full flex-col items-center justify-center marquee-mask-horizontal">
-            <Marquee pauseOnHover className="[--duration:50s]">
+          <div className="relative flex w-full flex-col items-center justify-center py-3 marquee-mask-horizontal">
+            <Marquee pauseOnHover className="[--duration:50s] overflow-visible">
               {DATA.skills.map((skill, id) => (
-                <BlurFade key={id} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
-                  <img src={skill.image} alt={skill.name} className="size-10" />
+                <BlurFade key={skill.name} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <span className="inline-flex size-14 cursor-pointer items-center justify-center">
+                        <img
+                          src={skill.image}
+                          alt={skill.name}
+                          className="size-10 origin-center transition-all duration-300 ease-out hover:scale-125"
+                        />
+                      </span>
+                    </TooltipTrigger>
+                    <TooltipContent className="bg-background text-foreground border border-border">
+                      <p>{skill.name}</p>
+                    </TooltipContent>
+                  </Tooltip>
                 </BlurFade>
               ))}
             </Marquee>
