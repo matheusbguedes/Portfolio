@@ -25,7 +25,12 @@ export const EducationCard = ({
   description,
 }: EducationCardProps) => {
   return (
-    <Link href={href || "#"} className="block cursor-pointer">
+    <Link
+      href={href || "#"}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="block cursor-pointer"
+    >
       <Card className="flex">
         <div className="flex-none">
           <Avatar className="border size-12 m-auto bg-muted-background">
@@ -42,9 +47,7 @@ export const EducationCard = ({
             <div className="flex items-center justify-between gap-x-2 text-base">
               <h3 className="inline-flex items-center justify-center font-semibold leading-none text-xs sm:text-sm gap-2">
                 {title}
-                <ArrowUpRight
-                  className="size-4 translate-x-0 transform opacity-0 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:opacity-100"
-                />
+                <ArrowUpRight className="size-4 translate-x-0 transform opacity-0 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:opacity-100" />
               </h3>
               <div className="text-xs sm:text-sm tabular-nums text-muted-foreground text-right">
                 {period}

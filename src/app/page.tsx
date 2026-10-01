@@ -188,6 +188,8 @@ export default function Page() {
                 <a
                   className="text-blue-500 hover:underline"
                   href="https://www.linkedin.com/in/matheus-borges-guedes/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   with a direct question on Linkedin
                 </a>{" "}
