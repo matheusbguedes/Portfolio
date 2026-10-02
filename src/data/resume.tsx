@@ -1,5 +1,5 @@
 import { Icons } from "@/components/icons";
-import { HomeIcon, Star } from "lucide-react";
+import { BriefcaseBusiness, HomeIcon, Star } from "lucide-react";
 
 const now = new Date();
 const age = now.getFullYear() - 2004;
@@ -11,36 +11,83 @@ export const DATA = {
   location: "São Paulo, SP",
   locationLink: "https://maps.app.goo.gl/TxSWum4TebBA3g9a7",
   description: "Software Engineer. I love building things and helping people.",
-  summary:
-    `Hey thats me, Matheus Borges. I'm a software engineer with a passion for building things and helping people. I'm currently working as a software engineer at UOL Edtech. I am just ${age} years old and I'm from Brazil. I'm a huge fan of technology and I'm always looking for new ways to improve my skills and knowledge.`,
+  summary: `Hey thats me, Matheus Borges. I'm a software engineer with a passion for building things and helping people. I'm currently working as a software engineer at UOL Edtech. I am just ${age} years old and I'm from Brazil. I'm a huge fan of technology and I'm always looking for new ways to improve my skills and knowledge.`,
   avatarUrl: "/me.jpeg",
   skills: [
-    { name: "JavaScript", image: "https://www.svgrepo.com/show/349419/javascript.svg" },
-    { name: "TypeScript", image: "https://www.svgrepo.com/show/349540/typescript.svg" },
-    { name: "Node.js", image: "https://www.svgrepo.com/show/452075/node-js.svg" },
-    { name: "Fastify", image: "https://www.svgrepo.com/show/306030/fastify.svg" },
-    { name: "Nest.js", image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nestjs/nestjs-original.svg" },
-    { name: "Vue.js", image: "https://www.svgrepo.com/show/303494/vue-9-logo.svg" },
+    {
+      name: "JavaScript",
+      image: "https://www.svgrepo.com/show/349419/javascript.svg",
+    },
+    {
+      name: "TypeScript",
+      image: "https://www.svgrepo.com/show/349540/typescript.svg",
+    },
+    {
+      name: "Node.js",
+      image: "https://www.svgrepo.com/show/452075/node-js.svg",
+    },
+    {
+      name: "Fastify",
+      image: "https://www.svgrepo.com/show/306030/fastify.svg",
+    },
+    {
+      name: "Nest.js",
+      image:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nestjs/nestjs-original.svg",
+    },
+    {
+      name: "Vue.js",
+      image: "https://www.svgrepo.com/show/303494/vue-9-logo.svg",
+    },
     { name: "Nuxt.js", image: "https://www.svgrepo.com/show/373940/nuxt.svg" },
     { name: "React", image: "https://www.svgrepo.com/show/452092/react.svg" },
-    { name: "Next.js", image: "https://www.svgrepo.com/show/369457/nextjs.svg" },
+    {
+      name: "Next.js",
+      image: "https://www.svgrepo.com/show/369457/nextjs.svg",
+    },
     { name: "Vite", image: "https://www.svgrepo.com/show/374167/vite.svg" },
-    { name: "Angular", image: "https://www.svgrepo.com/show/353396/angular-icon.svg" },
-    { name: "Flutter", image: "https://www.svgrepo.com/show/353751/flutter.svg" },
+    {
+      name: "Angular",
+      image: "https://www.svgrepo.com/show/353396/angular-icon.svg",
+    },
+    {
+      name: "Flutter",
+      image: "https://www.svgrepo.com/show/353751/flutter.svg",
+    },
     { name: "Java", image: "https://www.svgrepo.com/show/452234/java.svg" },
-    { name: "Spring Boot", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" },
-    { name: "Ruby on Rails", image: "https://www.svgrepo.com/show/452095/ruby.svg" },
+    {
+      name: "Spring Boot",
+      image:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg",
+    },
+    {
+      name: "Ruby on Rails",
+      image: "https://www.svgrepo.com/show/452095/ruby.svg",
+    },
     { name: "Python", image: "https://www.svgrepo.com/show/452091/python.svg" },
     { name: "Docker", image: "https://www.svgrepo.com/show/448221/docker.svg" },
-    { name: "PostgreSQL", image: "https://www.svgrepo.com/show/354200/postgresql.svg" },
+    {
+      name: "PostgreSQL",
+      image: "https://www.svgrepo.com/show/354200/postgresql.svg",
+    },
     { name: "Oracle", image: "https://www.svgrepo.com/show/354152/oracle.svg" },
-    { name: "MySQL", image: "https://www.svgrepo.com/show/303251/mysql-logo.svg" },
-    { name: "Redis", image: "https://www.svgrepo.com/show/303460/redis-logo.svg" },
-    { name: "MongoDB", image: "https://www.svgrepo.com/show/331488/mongodb.svg" },
+    {
+      name: "MySQL",
+      image: "https://www.svgrepo.com/show/303251/mysql-logo.svg",
+    },
+    {
+      name: "Redis",
+      image: "https://www.svgrepo.com/show/303460/redis-logo.svg",
+    },
+    {
+      name: "MongoDB",
+      image: "https://www.svgrepo.com/show/331488/mongodb.svg",
+    },
     { name: "AWS", image: "https://www.svgrepo.com/show/448266/aws.svg" },
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
+    { href: "/projects", icon: BriefcaseBusiness, label: "Projects" },
     { href: "/featured", icon: Star, label: "Featured" },
   ],
   contact: {
@@ -129,6 +176,16 @@ export const DATA = {
       logoUrl: "/etec_logo.jpg",
       start: "2020",
       end: "2022",
+    },
+  ],
+  projects: [
+    {
+      title: "Telea",
+      href: "https://usetelea.online",
+      description:
+        "A voice-following teleprompter built for all platforms. Drop in your script and Telea scrolls with your speech. Pause, and it waits with you. Offline, private, pay once.",
+      image: "/telea_banner.png",
+      technologies: ["macOS", "Windows", "Linux"],
     },
   ],
   featured: [

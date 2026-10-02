@@ -1,34 +1,35 @@
-import { FeaturedCard } from "@/components/featured-card";
+import { ProjectCard } from "@/components/project-card";
 import BlurFade from "@/components/magicui/blur-fade";
 import { DATA } from "@/data/resume";
 
 const BLUR_FADE_DELAY = 0.04;
 
-export default function Featured() {
+export default function Projects() {
   return (
-    <section id="featured">
+    <section id="projects">
       <div className="space-y-12 w-full">
         <BlurFade delay={BLUR_FADE_DELAY * 13}>
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
               <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 mb-2 text-sm">
-                Featured
+                Projects
               </div>
               <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Throughout my journey as a software engineer, I have some
-                featured moments that I want to share with you.
+                Products and projects I&apos;ve built along the way — from
+                ideas to shipped software.
               </p>
             </div>
           </div>
         </BlurFade>
         <ul className="mb-4 divide-y divide-dashed">
-          {DATA.featured.map((featured) => (
-            <FeaturedCard
-              key={featured.title}
-              title={featured.title}
-              description={featured.description}
-              image={featured.image}
-              date={featured.date}
+          {DATA.projects.map((project) => (
+            <ProjectCard
+              key={project.title}
+              title={project.title}
+              description={project.description}
+              image={project.image}
+              href={project.href}
+              technologies={project.technologies}
             />
           ))}
         </ul>
